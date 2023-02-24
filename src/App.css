@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Public+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+span, p {
+    font-family: 'Open Sans';
+}
+
+
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+}
+
+p {
+    font-size: 18px;
+}
+
+.minusm {
+    margin-bottom: 1rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.article {
+    max-width: 533px;
+}
+
+.article > span, .article > p {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.article > p {
+    margin-bottom: 2rem;
+}
+
+.article > img {
+    width: 533px;
+    height: 300px;
+}
+
+.tag {
+    position: relative;
+    margin-top: 25px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.tag::before {
+    position: absolute;
+    content: "";
+    top: 51px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+}
+
+.tag:hover::before {
+    opacity: 1;
+}
+
+
+/* QUERIES */
+
